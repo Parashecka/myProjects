@@ -3,7 +3,10 @@ cmake_minimum_required(VERSION 3.13 FATAL_ERROR)
 set(PROJECT_NAME myProjects)
 project(${PROJECT_NAME})
 
-add_executable(myProjects src/main.cpp)
+
+
+add_executable(${PROJECT_NAME} src/main.cpp src/Renderer/ShaderProgram.cpp src/Renderer/header.h)
+
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
