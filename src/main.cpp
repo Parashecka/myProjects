@@ -65,7 +65,7 @@ int main(int argc,char ** argv)
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << "\n";
     std::cout << "OpenGL version: " << glGetString(GL_VERSION) << "\n";
 
-    glClearColor(1, 0, 1, 1);
+    glClearColor(0, 0, 1, 1);
     {
         ResourceManager resourceManager(argv[0]);
         auto pDefaultShaderProgram = resourceManager.loadShaders("DefaultShader","res/shaders/vertex.txt", "res/shaders/fragment.txt");
@@ -109,7 +109,7 @@ int main(int argc,char ** argv)
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 0, nullptr);
 
         pDefaultShaderProgram->use();
-        pDefaultShaderProgram->setInt("tex", 0);//ìî¿ òåêñòóðè
+        pDefaultShaderProgram->setInt("tex", 0);//Ã¬Ã®Â¿ Ã²Ã¥ÃªÃ±Ã²Ã³Ã°Ã¨
 
         while (!glfwWindowShouldClose(pWindow))
         {
